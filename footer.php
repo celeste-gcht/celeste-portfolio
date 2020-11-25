@@ -1,5 +1,7 @@
 <?php wp_footer() ?>
 
+<!-- Test -->
+
 </div>  <!-- main-content -->
 <footer>
         <!-- <div class="fleche-up">
