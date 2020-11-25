@@ -3,8 +3,8 @@ Theme Name: Celeste
 Author: Céleste Guichot
 */
 
-@bgColor: #fffdf5;
-@textColor: #333333;
+$bgColor: #fffdf5;
+$textColor: #333333;
 
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap");
 
@@ -19,8 +19,8 @@ body {
   min-height: 100vh;
   font-family: "Open Sans", sans-serif;
   box-sizing: border-box;
-  color: @textColor;
-  background: @bgColor;
+  color: $textColor;
+  background: $bgColor;
   border: solid 60px white;
 }
 
@@ -397,7 +397,7 @@ footer p {
   }
 }
 
-/* ------------------------------------------------ MEDIA QUERIES ------------------------------------------------ */
+/* ------------------------------------------------ MEDIA QUERIES  ------------------------------------------------ */
 
 @media all and (max-width: 576px) {
   body {
@@ -406,7 +406,7 @@ footer p {
 
   nav {
     padding: 0 15px;
-    background-color: @bgColor;
+    background-color: $bgColor;
     justify-content: space-between;
   }
 
