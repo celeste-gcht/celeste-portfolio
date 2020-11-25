@@ -24,6 +24,11 @@ if (window.matchMedia("(min-width:991px)").matches) {
   };
 }
 
+
+// JQUERY
+
+// Menu burger pour responsive
+
 (function ($) {
   $(".burger").on("click", function () {
     $(".menu").toggleClass("ouvert");
@@ -45,7 +50,7 @@ if (window.matchMedia("(min-width:991px)").matches) {
   //     $(".filtre").addClass("filtre-scroll-down");
   //   });
 
-  // en savoir plus
+  // en savoir plus : bouton qui fait apparaître plus d'éléments
 
   $(".cel-project-info").hide();
   $(".cel-button-more").click(function () {
