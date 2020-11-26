@@ -8,9 +8,9 @@
 </head>
 
 <body <?php body_class(); ?>>
-    <header id="cel-header">
-        <nav id="cel-nav">
-            <div class="cel-logo">
+    <header id="cel-header" class="cel-header">
+        <nav id="cel-nav" class="cel-header__nav">
+            <div class="cel-header__logo">
                 <?php if(has_custom_logo()) : ?>
                     <?php the_custom_logo(); ?>
                     <?php else : ?>

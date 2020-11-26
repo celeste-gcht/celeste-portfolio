@@ -1,0 +1,40 @@
+.cel-header {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  transition: all ease-in-out 0.7s;
+}
+.cel-header__nav {
+  height: 70px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 98vw;
+  padding: 0 76px;
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  .cel-header__logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    p {
+      font-size: 0.7em;
+      margin-right: 2em;
+    }
+  }
+  .cel-header__logo:hover {
+    p {
+      color: indianred;
+    }
+  }
+  ul:hover {
+    a {
+      color: indianred;
+    }
+  }
+}

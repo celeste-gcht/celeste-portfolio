@@ -1,0 +1,14 @@
+.simple-social-icons {
+  overflow: hidden;
+  position: fixed;
+  right: 0;
+  top: 260px;
+  z-index: 5;
+  //transform: translateY(-50%);
+  // transform: translateY(120%);
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}

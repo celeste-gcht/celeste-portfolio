@@ -1,0 +1,40 @@
+.cel-seemore-container {
+  margin-top: 30px;
+  .cel-seemore {
+    //background-color: #99ab9f;
+    border: solid 1px #4a4a4a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    .cel-seemore-wording {
+      width: 70%;
+      h3 {
+        text-align: center;
+      }
+    }
+    .cel-seemore-thumbnail {
+      font-size: 0;
+      width: 30%;
+      height: 100%;
+      overflow: hidden;
+      img {
+        width: 100%;
+        object-fit: contain;
+        height: auto;
+      }
+    }
+  }
+}
+
+.cel-arrow-back {
+  width: 30px;
+  height: 30px;
+  position: fixed;
+  bottom: 50%;
+  left: 10px;
+  z-index: 5;
+  img {
+    width: 100%;
+  }
+}
