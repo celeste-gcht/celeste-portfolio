@@ -2,8 +2,9 @@
 Theme Name: Celeste
 Author: Céleste Guichot
 */
-@import "base/tempo";
 @import "utils/variables";
+@import "utils/fonts.scss";
+@import "base/tempo";
 @import "components/card";
 @import "components/filtre";
 @import "components/arrows";
@@ -12,105 +13,75 @@ Author: Céleste Guichot
 @import "layouts/gallery";
 @import "layouts/header";
 @import "layouts/footer";
+@import "layouts/projects-grid";
 @import "pages/projet";
-
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap");
-
-.cel-intro {
-  height: 50vh;
-  position: relative;
-  h1 {
-    text-align: center;
-  }
-  img {
-    object-fit: contain;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-  }
-}
 
 .wp-block-embed__wrapper {
   text-align: center;
-}
-
-.grid {
-  margin: 0;
-}
-
-/* ------------------------------------------------ MEDIA QUERIES ------------------------------------------------ */
-
-@media all and (max-width: 576px) {
-  body {
-    border: none;
-  }
-
-  nav {
-    padding: 0 15px;
-    background-color: $bgColor;
-    justify-content: space-between;
-  }
-
-  .wp-block-embed__wrapper {
+  @media screen and (max-width: $breakpointMobile) {
     iframe {
       width: 100%;
       margin: 0 auto;
     }
   }
-
-  main {
-    padding: 70px 0 40px 0;
-    width: 100%;
-  }
-
-  h1 {
-    font-size: 30px;
-  }
-
-  .main-content {
-    width: 90%;
-    padding: 50px 18px;
-  }
-
-  /* ------------- FILTRE ---------------- */
-
-  .filtre {
-    writing-mode: horizontal-tb;
-    position: unset;
-    width: 100%;
-    margin: 0 0 50px 0;
-    border: 1px solid #333333;
-    text-align: center;
-    li {
-      transform: none;
-    }
-  }
-
-  // icônes des réseaux sociaux
-  .simple-social-icons {
-    top: 70px;
-    right: -5px;
-  }
-
-  //fleche
-
-  // voir un autre projet
-
-  .cel-seemore-container {
-    .cel-seemore {
-      height: 110px;
-    }
-    .cel-seemore-thumbnail {
-      width: 40%;
-    }
-    .cel-seemore-wording {
-      width: 60%;
-    }
-  }
-
-  //footer
-  .footer-content {
-    height: 30px;
-  }
 }
+
+// /* ------------------------------------------------ MEDIA QUERIES ------------------------------------------------ */
+
+// @media all and (max-width: 576px) {
+
+//   main {
+//     padding: 70px 0 40px 0;
+//     width: 100%;
+//   }
+
+//   h1 {
+//     font-size: 30px;
+//   }
+
+//   .main-content {
+//     width: 90%;
+//     padding: 50px 18px;
+//   }
+
+//   /* ------------- FILTRE ---------------- */
+
+//   .filtre {
+//     writing-mode: horizontal-tb;
+//     position: unset;
+//     width: 100%;
+//     margin: 0 0 50px 0;
+//     border: 1px solid #333333;
+//     text-align: center;
+//     li {
+//       transform: none;
+//     }
+//   }
+
+//   // icônes des réseaux sociaux
+//   .simple-social-icons {
+//     top: 70px;
+//     right: -5px;
+//   }
+
+//   //fleche
+
+//   // voir un autre projet
+
+//   .cel-seemore-container {
+//     .cel-seemore {
+//       height: 110px;
+//     }
+//     .cel-seemore-thumbnail {
+//       width: 40%;
+//     }
+//     .cel-seemore-wording {
+//       width: 60%;
+//     }
+//   }
+
+//   //footer
+//   .footer-content {
+//     height: 30px;
+//   }
+// }

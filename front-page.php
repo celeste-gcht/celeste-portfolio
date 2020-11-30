@@ -28,22 +28,24 @@
     </ul>
     
     <!-- grille avec le framework Ui Kit -->
-            <section class="grid">
+            <section class="cel-grid">
               <?php 
                 // query digital - Design graphique
                 $query3 = new WP_Query( array( 'cat' => 4 ) ); ?>               
                 <?php if ( $query3->have_posts() ) : ?>
                     <?php while ( $query3->have_posts() ) : $query3->the_post(); ?>
-                       <div class="proj-prev">
-                            <a href="<?php the_permalink(); ?>">
-                                    <div class="proj-prev__image">
-                                        <?php the_post_thumbnail('thumbnail'); ?>
-                                    </div>
-                                    <h2 class="prof-prev__heading"><?php the_title(); ?></h2>
-                                    <p class="proj-prev__desc"><?php the_field('field_5ec47047f1990')?></p>                             
-                            
-                            </a>
-                      </div>
+                    <div class="proj-prev">
+                      <a href="<?php the_permalink(); ?>">
+                          <div class="proj-prev__image">
+                              <?php the_post_thumbnail('medium'); ?>
+                          </div>
+                            <div class="proj-prev__desc">
+
+                            <h2 class="proj-prev__desc__heading"><?php the_title(); ?></h2>
+                            <p class="proj-prev__desc__subtitle"><?php the_field('field_5ec47047f1990')?></p> 
+                        </div>                                
+                          </a>
+                        </div>
                     <?php endwhile; ?>               
                     <?php wp_reset_postdata(); ?>              
                 <?php else : ?>
@@ -56,15 +58,17 @@
                 $query2 = new WP_Query( array( 'cat' => 3 ) ); ?>               
                 <?php if ( $query2->have_posts() ) : ?>
                     <?php while ( $query2->have_posts() ) : $query2->the_post(); ?>
-                      <div class="proj-prev">
-                        <a href="<?php the_permalink(); ?>">
+                    <div class="proj-prev">
+                      <a href="<?php the_permalink(); ?>">
                           <div class="proj-prev__image">
-                              <?php the_post_thumbnail('thumbnail'); ?>
+                              <?php the_post_thumbnail('medium'); ?>
                           </div>
-                          <h2 class="proj-prev__heading"><?php the_title(); ?></h2>
-                          <p class="proj-prev__desc"><?php the_field('field_5ec47047f1990')?></p>                        
+                          <div class="proj-prev__desc">
+                            <h2 class="proj-prev__desc__heading"><?php the_title(); ?></h2>
+                            <p class="proj-prev__desc__subtitle"><?php the_field('field_5ec47047f1990')?></p> 
+                          </div>                       
                         </a>
-                      </div>
+                        </div>
                     <?php endwhile; ?>
                     <?php wp_reset_postdata(); ?>
                 

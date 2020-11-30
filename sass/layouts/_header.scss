@@ -6,35 +6,37 @@
   position: fixed;
   z-index: 3;
   top: 0;
+  left: 0;
   transition: all ease-in-out 0.7s;
-}
-.cel-header__nav {
-  height: 70px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  width: 98vw;
-  padding: 0 76px;
-  font-family: "Open Sans", sans-serif;
-  text-transform: uppercase;
-  font-weight: 700;
-  .cel-header__logo {
+  &__nav {
+    height: 70px;
     display: flex;
-    flex-direction: row;
+    justify-content: flex-end;
     align-items: center;
-    p {
-      font-size: 0.7em;
+    // width: 98vw;
+    padding: 0 76px;
+    font-family: "Open Sans", sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+    @media screen and (max-width: $breakpointMobile) {
+      padding: 0 10%;
+      background-color: $bgColor;
+      justify-content: space-between;
+    }
+    &__logo {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      font-size: 0.7rem;
       margin-right: 2em;
+      & p:hover {
+        color: $hoverTextColor;
+      }
     }
-  }
-  .cel-header__logo:hover {
-    p {
-      color: indianred;
-    }
-  }
-  ul:hover {
-    a {
-      color: indianred;
+    ul:hover {
+      a {
+        color: $hoverTextColor;
+      }
     }
   }
 }

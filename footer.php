@@ -1,6 +1,6 @@
 <?php wp_footer() ?>
 
-</div>  <!-- main-content -->
+ </div>  <!--main-content -->
 <footer>
         <!-- <div class="fleche-up">
           <img src=" <?php // echo get_template_directory_uri(); ?>/images/Ico-arrow.png" alt="revenir en haut de la page" />

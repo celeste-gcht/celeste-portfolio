@@ -9,15 +9,18 @@ body {
   min-height: 100vh;
   font-family: "Open Sans", sans-serif;
   box-sizing: border-box;
-  color: $textColor;
+  color: $primaryTextColor;
   background: $bgColor;
   border: solid 60px white;
+  @media screen and (max-width: $breakpointMobile) {
+    border: none;
+  }
 }
 
-main {
-  margin: 0 auto;
-  width: 80%;
-}
+// main {
+//   margin: 0 auto;
+//   width: 80%;
+// }
 
 .main-content {
   padding: 100px 0;
@@ -44,9 +47,10 @@ ul {
 
 a {
   color: #1a1a1a;
+  text-decoration: none;
 }
 
-.container {
-  max-width: 1000px;
-  margin: 0 auto;
-}
+// .container {
+//   max-width: 1000px;
+//   margin: 0 auto;
+// }
