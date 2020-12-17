@@ -1,27 +1,36 @@
 .cel-seemore-container {
   margin-top: 30px;
+  display: flex;
+  justify-content: center;
   .cel-seemore {
-    //background-color: #99ab9f;
-    border: solid 1px #4a4a4a;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: auto;
-    .cel-seemore-wording {
-      width: 70%;
-      h3 {
-        text-align: center;
+    position: relative;
+    &:hover {
+      .cel-seemore-thumbnail img {
+        opacity: 0.5;
+        transition: all ease-in-out 0.2s;
       }
+    }
+    .cel-seemore-wording {
+      position: absolute;
+      z-index: 2;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      font-size: 1.3rem;
+      // color: $secondaryTextColor;
+      font-family: "Libre Baskerville";
     }
     .cel-seemore-thumbnail {
       font-size: 0;
-      width: 30%;
-      height: 100%;
+      width: 240px;
+      height: 240px;
       overflow: hidden;
+      border-radius: 50%;
       img {
         width: 100%;
-        object-fit: contain;
-        height: auto;
+        object-fit: cover;
+        opacity: 0.3;
       }
     }
   }

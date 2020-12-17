@@ -8,8 +8,8 @@
 </head>
 
 <body <?php body_class(); ?>>
-    <header id="cel-header" class="cel-header">
-        <nav id="cel-nav" class="cel-header__nav">
+    <header id="celHeader" class="cel-header">
+        <nav id="celNav" class="cel-header__nav">
             <div class="cel-header__nav__logo">
                 <?php if(has_custom_logo()) : ?>
                     <?php the_custom_logo(); ?>
@@ -27,4 +27,4 @@
                 ?>
         </nav>
     </header>
-    <div class="main-content">
+    <div class="container">

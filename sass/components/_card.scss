@@ -1,27 +1,51 @@
 .proj-prev {
+  display: none;
   position: relative;
   overflow: hidden;
+  &:hover &__desc__heading,
+  &:hover &__desc__subtitle {
+    transform: translateY(-50px);
+  }
+  &:hover {
+    :after {
+      opacity: 1;
+    }
+  }
   &__desc {
     width: 100%;
     position: absolute;
     z-index: 2;
-    bottom: 0;
+    bottom: -30px;
     color: $secondaryTextColor;
-    background: rgb(0, 0, 0);
     background: linear-gradient(
       0deg,
-      rgba(0, 0, 0, 0.25) 0%,
+      rgba(0, 0, 0, 0.15) 0%,
       rgba(0, 212, 255, 0) 100%
     );
     text-align: left;
     padding: 30px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    &:after {
+      content: "Voir";
+      display: inline-block;
+      padding: 5px 10px;
+      border: 2px solid $secondaryTextColor;
+      opacity: 0;
+      transition: all ease-out 0.4s;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      position: absolute;
+      bottom: 50px;
+    }
     &__heading {
       font-family: "Libre Baskerville", serif;
-      font-size: 2.2rem;
+      color: $secondaryTextColor;
+      font-size: 2rem;
       font-weight: 400;
       margin: 0;
       line-height: 120%;
+      overflow-wrap: break-word;
+      transition: all ease-out 0.4s;
       @media (max-width: 576px) {
         font-size: 1.7rem;
       }
@@ -29,7 +53,9 @@
     &__subtitle {
       font-size: 0.9rem;
       font-weight: 300;
-      margin: 0;
+      color: $secondaryTextColor;
+      margin-top: 0;
+      transition: all ease-out 0.4s;
     }
   }
   &__image {
@@ -37,9 +63,7 @@
     width: 100%;
     img {
       width: 100%;
-      height: auto;
       object-fit: cover;
-      transition: all ease-in-out 0.3s;
     }
   }
 }
