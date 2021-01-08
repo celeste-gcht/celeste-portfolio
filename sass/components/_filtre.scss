@@ -7,9 +7,16 @@
   top: 260px;
   z-index: 2;
   // transition: all ease-in-out 0.5s;
+  @media (max-width: 576px) {
+    width: 90%;
+    position: inherit;
+    display: flex;
+    justify-content: space-around;
+    margin: 10px;
+  }
   &__item {
     border: none;
-    padding: 10px;
+    // padding: 10px;
     color: $primaryTextColor;
     text-transform: uppercase;
     font-weight: 800;

@@ -7,14 +7,20 @@
           <button class="btn active cel-filter__item" onclick="filterSelection('tout')">Tout</button>
       </div>
         <section class="cel-grid">
+
+
+
           <?php 
             // query - Design graphique
             $query1 = new WP_Query( array( 
               'cat'     => 4,
               'orderby' => 'menu_order',
               'order'   => 'ASC'
-              ) ); ?>               
+              ) ); ?>  
+              
+                           
             <?php if ( $query1->have_posts() ) : ?>
+            
                 <?php while ( $query1->have_posts() ) : $query1->the_post(); ?>
                   <div class="proj-prev filterDiv query1">
                       <div class="proj-prev__image">
@@ -65,6 +71,8 @@
             <?php else : ?>
                 <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
             <?php endif; ?>
+
+            
           </section>
     </main>
   

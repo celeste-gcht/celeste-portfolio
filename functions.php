@@ -13,8 +13,6 @@ function montheme_supports (){
 
 function montheme_register_assets (){
     wp_enqueue_script('cel-scripts', get_template_directory_uri() . '/scripts/cel-scripts.js', array( 'jquery' ), '1.0', true);
-    wp_enqueue_script('ui-ki-js', 'https://cdn.jsdelivr.net/npm/uikit@3.3.3/dist/js/uikit.min.js');
-    wp_enqueue_script('ui-ki-js-icons', 'https://cdn.jsdelivr.net/npm/uikit@3.3.3/dist/js/uikit-icons.min.js');
 }
 
 function montheme_register_widget (){
@@ -39,7 +37,7 @@ function theme_scripts() {
     
     }
 
-// //* Ajouter le support de page pour les articles : desactiver pour avoir le projet suggéré en random
+// //* Ajouter le support de page pour les articles : desactiver pour avoir le projet suggéré en random, laissé seulement le page-attributes
 // add_post_type_support( 'post', 'page-attributes' );
 //     //* Changer ordre d'affichage dans les pages d'archives des articles
 // add_action( 'pre_get_posts', 'gn_post_archive_order' );
